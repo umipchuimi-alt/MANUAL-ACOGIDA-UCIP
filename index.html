@@ -83,6 +83,42 @@ footer{border-top:1px solid var(--line);background:#eef4f5;padding:21px 0 27px;c
 [dir="rtl"] .phone-row{justify-content:flex-start}
 @media(max-width:680px){[dir="rtl"] .panel{padding:0 58px 17px 14px}[dir="rtl"] .intro{grid-template-columns:35px minmax(0,1fr)}[dir="rtl"] .brand-row{direction:ltr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Paleta cálida y tranquila, manteniendo una estética sanitaria institucional */
+:root{--ink:#30443f;--muted:#6e7b72;--teal:#52776b;--teal-soft:#e3ebe2;--blue-soft:#e8ece7;--lav:#eae5ed;--peach:#f1dfd3;--yellow:#f5edda;--line:#e5ddd3;--paper:#fffdfa;--bg:#f7f3ec;--shadow:0 8px 25px rgba(77,68,53,.07)}
+body{background:var(--bg)}
+header{background:linear-gradient(135deg,#f3eee5 0%,#edf1e9 58%,#f6e9df 100%)}
+.logo-card{border-color:#e5ddd3;background:rgba(255,253,250,.9)}
+.chuimi-word{color:#49695d}
+.hospital-name{color:#536b60}
+.hero-art{background:#e1e9df}
+.hero-art:before{background:#f1dfd3}
+.hero-art:after{background:#e5dfea}
+.eyebrow{background:#e4ebe1;border-color:#d6e1d3;color:#456c5d}
+.eyebrow:before{background:#91a992}
+.intro{background:var(--paper);border-color:var(--line)}
+.intro-icon{background:#f1dfd3;color:#866a57}
+.intro p,.panel{color:#4e6057}
+.phone{background:#e4ebe1;color:#3f6657}
+footer{background:#eee9e0}
+.category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.category-card{display:flex;align-items:flex-start;gap:14px;text-align:left;width:100%;min-height:126px;padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:17px;color:var(--ink);cursor:pointer;box-shadow:0 3px 12px rgba(77,68,53,.025);transition:transform .15s,border-color .15s,box-shadow .15s}
+.category-card:hover{transform:translateY(-2px);border-color:#c9d6c8;box-shadow:var(--shadow)}
+.category-card:focus-visible,.back-button:focus-visible{outline:3px solid #8eaa97;outline-offset:3px}
+.category-icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border-radius:14px;background:var(--category-bg,#e3ebe2);color:#52776b}
+.category-icon svg{width:23px;height:23px}
+.category-copy{min-width:0;flex:1}
+.category-copy strong{display:block;font-size:15px;line-height:1.35;margin:2px 0 6px}
+.category-copy small{display:block;color:var(--muted);font-size:12px;line-height:1.45}
+.category-arrow{color:#8a9a8d;align-self:center;flex:0 0 18px}
+.category-arrow svg{width:18px;height:18px}
+.category-view[hidden],.category-grid[hidden]{display:none!important}
+.back-button{display:inline-flex;align-items:center;gap:8px;margin:0 0 15px;padding:9px 13px;border:1px solid var(--line);border-radius:11px;background:var(--paper);color:var(--teal);font-weight:750;cursor:pointer}
+.back-button svg{width:17px;height:17px}
+@media(max-width:560px){.category-grid{grid-template-columns:1fr;gap:10px}.category-card{min-height:0;padding:15px}.category-copy strong{font-size:14px}.category-copy small{font-size:11px}}
+[dir="rtl"] .category-card{text-align:right;direction:rtl}
+[dir="rtl"] .category-arrow{transform:scaleX(-1)}
+
 </style>
 </head>
 <body>
@@ -127,7 +163,7 @@ footer{border-top:1px solid var(--line);background:#eef4f5;padding:21px 0 27px;c
   </div>
  </section>
  <div class="content-heading"><h2 id="sections-title">Información de la unidad</h2><p id="sections-hint">Pulsa en cada apartado para consultar la información.</p></div>
- <section class="accordions" id="sections" aria-label="Apartados del manual"></section>
+ <section class="category-grid" id="category-grid" aria-label="Categorías del manual"></section><section class="category-view" id="category-view" hidden><button type="button" class="back-button" id="back-button"><span id="back-icon"></span><span id="back-label">Volver a las categorías</span></button><div class="accordions" id="sections" aria-label="Apartados del manual"></div></section>
 </main>
 <footer><div class="wrap footer-inner"><span class="footer-brand" id="footer-brand">UCIP · Hospital Universitario Materno Infantil de Canarias</span><span id="footer-date">Manual original: marzo de 2025</span></div></footer>
 <script>
@@ -289,6 +325,81 @@ sections:[
 };
 const $ = function(id){return document.getElementById(id);};
 function escapeText(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");}
+const categoryGroups = {
+ es:[
+  {title:"Bienvenida y estancia",sub:"Conoce la unidad y cómo será la estancia",icon:"bed",bg:"var(--teal-soft)",indices:[0,1,2]},
+  {title:"Información médica",sub:"Información del equipo médico y alta",icon:"info",bg:"var(--peach)",indices:[3,4]},
+  {title:"Acompañar a tu hijo",sub:"Acompañantes, visitas y privacidad",icon:"person",bg:"var(--lav)",indices:[5]},
+  {title:"Cuidados y bienestar",sub:"Alimentación, higiene, descanso y lactancia",icon:"heart",bg:"var(--teal-soft)",indices:[6,7,8,9,10]},
+  {title:"Servicios y normas",sub:"Wifi, servicios, normas y objetos personales",icon:"wifi",bg:"var(--peach)",indices:[11,12,13,14,15,16]}
+ ],
+ en:[
+  {title:"Welcome and your stay",sub:"Get to know the unit and your stay",icon:"bed",bg:"var(--teal-soft)",indices:[0,1,2]},
+  {title:"Medical information",sub:"Medical team information and discharge",icon:"info",bg:"var(--peach)",indices:[3,4]},
+  {title:"Being with your child",sub:"Companions, visits and privacy",icon:"person",bg:"var(--lav)",indices:[5]},
+  {title:"Care and wellbeing",sub:"Food, hygiene, rest and breastfeeding",icon:"heart",bg:"var(--teal-soft)",indices:[6,7,8,9,10]},
+  {title:"Services and rules",sub:"Wi-Fi, services, rules and belongings",icon:"wifi",bg:"var(--peach)",indices:[11,12,13,14,15,16]}
+ ],
+ fr:[
+  {title:"Bienvenue et séjour",sub:"Découvrir l’unité et le déroulement du séjour",icon:"bed",bg:"var(--teal-soft)",indices:[0,1,2]},
+  {title:"Informations médicales",sub:"Équipe médicale et sortie",icon:"info",bg:"var(--peach)",indices:[3,4]},
+  {title:"Être auprès de votre enfant",sub:"Accompagnants, visites et intimité",icon:"person",bg:"var(--lav)",indices:[5]},
+  {title:"Soins et bien-être",sub:"Alimentation, hygiène, repos et allaitement",icon:"heart",bg:"var(--teal-soft)",indices:[6,7,8,9,10]},
+  {title:"Services et règles",sub:"Wi-Fi, services, règles et effets personnels",icon:"wifi",bg:"var(--peach)",indices:[11,12,13,14,15,16]}
+ ],
+ ar:[
+  {title:"الترحيب والإقامة",sub:"التعرّف على الوحدة والإقامة فيها",icon:"bed",bg:"var(--teal-soft)",indices:[0,1,2]},
+  {title:"المعلومات الطبية",sub:"الفريق الطبي والخروج من الوحدة",icon:"info",bg:"var(--peach)",indices:[3,4]},
+  {title:"البقاء مع طفلك",sub:"المرافقون والزيارات والخصوصية",icon:"person",bg:"var(--lav)",indices:[5]},
+  {title:"الرعاية والرفاه",sub:"الغذاء والنظافة والراحة والرضاعة",icon:"heart",bg:"var(--teal-soft)",indices:[6,7,8,9,10]},
+  {title:"الخدمات والقواعد",sub:"الواي فاي والخدمات والقواعد والأغراض الشخصية",icon:"wifi",bg:"var(--peach)",indices:[11,12,13,14,15,16]}
+ ],
+ de:[
+  {title:"Willkommen und Aufenthalt",sub:"Die Station und den Aufenthalt kennenlernen",icon:"bed",bg:"var(--teal-soft)",indices:[0,1,2]},
+  {title:"Medizinische Informationen",sub:"Ärztliches Team und Entlassung",icon:"info",bg:"var(--peach)",indices:[3,4]},
+  {title:"Bei Ihrem Kind sein",sub:"Begleitpersonen, Besuche und Privatsphäre",icon:"person",bg:"var(--lav)",indices:[5]},
+  {title:"Pflege und Wohlbefinden",sub:"Ernährung, Hygiene, Ruhe und Stillen",icon:"heart",bg:"var(--teal-soft)",indices:[6,7,8,9,10]},
+  {title:"Services und Regeln",sub:"WLAN, Services, Regeln und persönliche Gegenstände",icon:"wifi",bg:"var(--peach)",indices:[11,12,13,14,15,16]}
+ ],
+ it:[
+  {title:"Benvenuto e soggiorno",sub:"Conoscere l’unità e il soggiorno",icon:"bed",bg:"var(--teal-soft)",indices:[0,1,2]},
+  {title:"Informazioni mediche",sub:"Équipe medica e dimissione",icon:"info",bg:"var(--peach)",indices:[3,4]},
+  {title:"Stare con il proprio bambino",sub:"Accompagnatori, visite e privacy",icon:"person",bg:"var(--lav)",indices:[5]},
+  {title:"Assistenza e benessere",sub:"Alimentazione, igiene, riposo e allattamento",icon:"heart",bg:"var(--teal-soft)",indices:[6,7,8,9,10]},
+  {title:"Servizi e regole",sub:"Wi-Fi, servizi, regole ed effetti personali",icon:"wifi",bg:"var(--peach)",indices:[11,12,13,14,15,16]}
+ ]
+};
+const categoryUi = {
+ es:{back:"Volver a las categorías",title:"Explora el manual por temas",hint:"Elige un bloque para consultar sus apartados."},
+ en:{back:"Back to categories",title:"Explore the guide by topic",hint:"Choose a category to view its sections."},
+ fr:{back:"Retour aux catégories",title:"Parcourir le guide par thème",hint:"Choisissez une catégorie pour consulter ses rubriques."},
+ ar:{back:"العودة إلى الفئات",title:"تصفّح الدليل حسب الموضوع",hint:"اختر فئة للاطلاع على أقسامها."},
+ de:{back:"Zurück zu den Kategorien",title:"Den Leitfaden nach Themen erkunden",hint:"Wählen Sie eine Kategorie, um die Abschnitte zu sehen."},
+ it:{back:"Torna alle categorie",title:"Esplora la guida per argomento",hint:"Scegli una categoria per consultare le sezioni."}
+};
+let activeCategory = null;
+function showCategory(index){
+ const lang=$("language").value;
+ const t=languages[lang]||languages.es;
+ const group=(categoryGroups[lang]||categoryGroups.es)[index];
+ if(!group)return;
+ activeCategory=index;
+ $("category-grid").hidden=true;
+ $("category-view").hidden=false;
+ $("sections-title").textContent=group.title;
+ $("sections-hint").textContent=group.sub;
+ $("back-label").textContent=(categoryUi[lang]||categoryUi.es).back;
+ $("back-icon").innerHTML=icon("back");
+ $("sections").innerHTML=group.indices.map(function(i){
+  const s=t.sections[i];
+  if(!s)return "";
+  let body=s.body.map(function(p){return "<p>"+escapeText(p)+"</p>";}).join("");
+  if(s.note){body+='<p class="note">'+escapeText(s.note)+'</p>';}
+  return '<details><summary><span class="section-icon" style="--icon-bg:'+s.bg+'">'+icon(s.icon)+'</span><span class="summary-text"><strong>'+escapeText(s.title)+'</strong><small>'+escapeText(s.sub)+'</small></span><span class="chevron">'+icon('chevron')+'</span></summary><div class="panel">'+body+'</div></details>';
+ }).join("");
+ $("sections-view-top");
+ window.scrollTo({top:$("sections-title").getBoundingClientRect().top+window.scrollY-18,behavior:"smooth"});
+}
 function render(lang){
  const t=languages[lang]||languages.es;
  document.documentElement.lang=lang;
@@ -299,17 +410,23 @@ function render(lang){
  $("page-subtitle").textContent=t.subtitle;
  $("welcome-title").textContent=t.welcomeTitle;
  $("phone-label").textContent=t.phone;
- $("sections-title").textContent=t.sectionsTitle;
- $("sections-hint").textContent=t.hint;
+ $("sections-title").textContent=(categoryUi[lang]||categoryUi.es).title;
+ $("sections-hint").textContent=(categoryUi[lang]||categoryUi.es).hint;
  $("footer-brand").textContent=t.footer;
  $("footer-date").textContent=t.date;
  $("welcome-copy").innerHTML=t.welcome.map(function(p){return "<p>"+escapeText(p)+"</p>";}).join("");
- $("sections").innerHTML=t.sections.map(function(s,i){
-  var body=s.body.map(function(p){return "<p>"+escapeText(p)+"</p>";}).join("");
-  if(s.note){body+='<p class="note">'+escapeText(s.note)+'</p>';}
-  return '<details><summary><span class="section-icon" style="--icon-bg:'+s.bg+'">'+icon(s.icon)+'</span><span class="summary-text"><strong>'+escapeText(s.title)+'</strong><small>'+escapeText(s.sub)+'</small></span><span class="chevron">'+icon('chevron')+'</span></summary><div class="panel">'+body+'</div></details>';
+ activeCategory=null;
+ $("category-view").hidden=true;
+ $("category-grid").hidden=false;
+ $("sections").innerHTML="";
+ $("category-grid").innerHTML=(categoryGroups[lang]||categoryGroups.es).map(function(g,i){
+  return '<button type="button" class="category-card" data-category="'+i+'"><span class="category-icon" style="--category-bg:'+g.bg+'">'+icon(g.icon)+'</span><span class="category-copy"><strong>'+escapeText(g.title)+'</strong><small>'+escapeText(g.sub)+'</small></span><span class="category-arrow">'+icon("arrow")+'</span></button>';
  }).join("");
 }
+icons.back='<path d="m15 18-6-6 6-6"/><path d="M9 12h12"/>';
+icons.arrow='<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>';
+$("category-grid").addEventListener("click",function(e){const b=e.target.closest("[data-category]");if(b)showCategory(Number(b.getAttribute("data-category")));});
+$("back-button").addEventListener("click",function(){activeCategory=null;$("category-view").hidden=true;$("category-grid").hidden=false;const lang=$("language").value;const ui=categoryUi[lang]||categoryUi.es;$("sections-title").textContent=ui.title;$("sections-hint").textContent=ui.hint;window.scrollTo({top:$("sections-title").getBoundingClientRect().top+window.scrollY-18,behavior:"smooth"});});
 icons.chevron='<path d="m6 9 6 6 6-6"/>';
 $("language").addEventListener("change",function(e){render(e.target.value);});
 render("es");
