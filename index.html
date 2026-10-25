@@ -243,6 +243,34 @@ footer{background:#f0f4fa;border-top-color:#e2e7f0;color:#718093}
 .footer-brand{color:#52758a}
 @media(max-width:680px){.hero{padding:17px 0 22px}.intro{border-radius:16px}.category-card{padding:13px 12px}}
 
+
+/* Bloques pediátricos a color completo con iconografía plana */
+.category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;max-width:none}
+.category-item{border:0;border-radius:18px;overflow:hidden;background:var(--accent-bg);box-shadow:0 4px 14px rgba(55,65,95,.055);transition:box-shadow .18s,transform .18s}
+.category-item:nth-child(1){--accent:#397e9a;--accent-bg:#dceff7;--accent-border:#b8dce9}
+.category-item:nth-child(2){--accent:#b96555;--accent-bg:#fbe3dc;--accent-border:#f0c7bc}
+.category-item:nth-child(3){--accent:#7863a5;--accent-bg:#eae3f7;--accent-border:#d2c5ec}
+.category-item:nth-child(4){--accent:#9b7627;--accent-bg:#fff0bf;--accent-border:#f0dda0}
+.category-item:nth-child(5){--accent:#39785d;--accent-bg:#dff1e4;--accent-border:#c0e1ca}
+.category-card{display:flex;align-items:center;gap:13px;text-align:left;width:100%;min-height:112px;padding:18px;background:var(--accent-bg);border:0;border-radius:0;color:#34465a;cursor:pointer;box-shadow:none;transition:filter .15s}
+.category-card:hover{background:var(--accent-bg);filter:brightness(.975);transform:none;box-shadow:none}
+.category-icon{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.72)!important;color:var(--accent);border:0}
+.category-icon svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.8}
+.category-copy strong{display:block;font-size:15px;line-height:1.35;margin:0 0 5px;color:#304356;font-weight:780}
+.category-copy small{display:block;color:#526577;font-size:12px;line-height:1.45}
+.category-arrow{color:var(--accent);align-self:center;flex:0 0 18px}
+.category-item.is-expanded{grid-column:1/-1;border:1px solid var(--accent-border);background:#fff;box-shadow:0 8px 24px rgba(55,65,95,.08)}
+.category-item.is-expanded .category-card{background:var(--accent-bg);border-bottom:1px solid var(--accent-border)}
+.category-inline-panel{padding:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:10px;background:#fff}
+.category-inline-panel details{border-radius:12px;background:#fff;border:1px solid #e6e7ed;box-shadow:none}
+.category-inline-panel details[open]{border-color:var(--accent-border);box-shadow:0 3px 12px rgba(55,65,95,.05)}
+.category-inline-panel .section-icon{background:#f0f4fa!important;color:#5b7e9b;border-radius:10px}
+.category-inline-panel details:nth-child(3n+2) .section-icon{background:#fff0e9!important;color:#bd7867}
+.category-inline-panel details:nth-child(3n) .section-icon{background:#f1ebfb!important;color:#8871b0}
+.category-inline-panel .panel{color:#4e6174;line-height:1.7}
+@media(min-width:800px){.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:900px;margin-inline:auto}.content-heading{max-width:900px;margin-inline:auto}}
+@media(max-width:680px){.category-grid{grid-template-columns:1fr;gap:10px}.category-card{min-height:88px;padding:14px}.category-icon{width:40px;height:40px;flex-basis:40px}.category-item.is-expanded{grid-column:1/-1}.category-inline-panel{grid-template-columns:1fr;padding:10px;gap:8px}}
+
 </style>
 </head>
 <body>
