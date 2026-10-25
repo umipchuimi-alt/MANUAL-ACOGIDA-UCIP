@@ -86,13 +86,16 @@ footer{border-top:1px solid var(--line);background:#eef4f5;padding:21px 0 27px;c
 
 
 .category-grid{align-items:start}
-.category-item{min-width:0}
-.category-inline-panel{margin-top:9px;display:grid;gap:9px}
-.category-inline-panel[hidden]{display:none!important}
-.category-card[aria-expanded="true"]{border-color:#a8beaa;background:#fbfcf8;box-shadow:var(--shadow)}
+.category-item{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 3px 12px rgba(77,68,53,.025);align-self:start}
+.category-card{border:0;border-radius:0;box-shadow:none;background:transparent}
+.category-card:hover{transform:none;border-color:transparent;box-shadow:none;background:#fbfcf8}
+.category-card[aria-expanded="true"]{border-color:transparent;background:#fbfcf8;box-shadow:none}
 .category-card[aria-expanded="true"] .category-arrow{transform:rotate(90deg)}
+.category-inline-panel{padding:0 12px 13px;display:grid;gap:9px}
+.category-inline-panel[hidden]{display:none!important}
 .category-inline-panel details{border-radius:13px}
-@media(max-width:560px){.category-inline-panel{margin-top:7px}}
+.category-inline-panel .panel{padding-bottom:16px}
+@media(max-width:560px){.category-inline-panel{padding:0 9px 10px}}
 
 /* Paleta cálida y tranquila, manteniendo una estética sanitaria institucional */
 :root{--ink:#30443f;--muted:#6e7b72;--teal:#52776b;--teal-soft:#e3ebe2;--blue-soft:#e8ece7;--lav:#eae5ed;--peach:#f1dfd3;--yellow:#f5edda;--line:#e5ddd3;--paper:#fffdfa;--bg:#f7f3ec;--shadow:0 8px 25px rgba(77,68,53,.07)}
