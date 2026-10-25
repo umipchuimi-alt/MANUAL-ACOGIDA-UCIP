@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#edf5f7">
+<meta name="description" content="Manual de acogida de la Unidad de Cuidados Intensivos Pediátricos del Hospital Universitario Materno Infantil de Canarias.">
+<title>Manual de acogida UCIP · CHUIMI</title>
+<style>
+:root{--ink:#203845;--muted:#637984;--teal:#376f78;--teal-soft:#e4f1f1;--blue-soft:#eaf0f8;--lav:#f0edf8;--peach:#fbf0e8;--yellow:#fbf5d9;--line:#dbe6e9;--paper:#fff;--bg:#f4f8f9;--shadow:0 8px 28px rgba(38,73,84,.07)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}
+button,select{font:inherit}
+header{background:linear-gradient(135deg,#f0f7f7 0%,#f7f5fb 54%,#fff8f1 100%);border-bottom:1px solid var(--line)}
+.wrap{width:min(1060px,calc(100% - 32px));margin-inline:auto}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:17px 0}
+.brand-row{display:flex;align-items:center;gap:14px;min-width:0}
+.logo-card{display:flex;align-items:center;justify-content:center;min-height:54px;padding:7px 11px;background:rgba(255,255,255,.86);border:1px solid #e3eaec;border-radius:13px}
+.logo-scs{width:140px;max-width:24vw;height:43px;object-fit:contain}
+.logo-chuimi{width:126px;max-width:23vw;height:48px;object-fit:contain}
+.brand-divider{height:40px;width:1px;background:#d7e2e4}
+.hospital-name{max-width:265px;font-size:11px;letter-spacing:.045em;font-weight:750;color:#3e5e69;line-height:1.4;text-transform:uppercase}
+.language{display:flex;flex-direction:column;gap:4px;min-width:145px}
+.language label{font-size:11px;font-weight:750;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.language select{border:1px solid #cddde1;background:#fff;color:var(--ink);border-radius:11px;padding:10px 35px 10px 12px;outline-offset:3px;cursor:pointer}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px;padding:24px 0 35px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);background:var(--teal-soft);border:1px solid #d2e7e7;border-radius:999px;padding:7px 12px}
+.eyebrow:before{content:"";width:7px;height:7px;background:#72a7a5;border-radius:50%}
+h1{font-size:clamp(29px,4.2vw,47px);line-height:1.08;letter-spacing:-.04em;margin:16px 0 12px;font-weight:780}
+.subtitle{font-size:15px;color:var(--muted);max-width:650px;margin:0}
+.hero-art{width:164px;height:164px;border-radius:38% 62% 55% 45% / 48% 42% 58% 52%;background:#e1eeee;display:grid;place-items:center;position:relative;flex:none}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;background:#f7e9de}
+.hero-art:before{width:35px;height:35px;top:12px;right:9px}
+.hero-art:after{width:22px;height:22px;bottom:12px;left:17px;background:#d9d5ed}
+.hero-art svg{width:104px;height:104px;z-index:1}
+main{padding:29px 0 52px}
+.intro{padding:24px 25px;background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);display:grid;grid-template-columns:45px minmax(0,1fr);gap:15px;margin-bottom:26px}
+.intro-icon{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:var(--peach);color:#8b654d}
+.intro-icon svg{width:22px;height:22px}
+h2{font-size:19px;line-height:1.25;margin:0 0 10px;letter-spacing:-.02em}
+.intro p{margin:7px 0;color:#425b66;font-size:14px}
+.phone-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:13px}
+.phone-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.phone{display:inline-flex;align-items:center;gap:7px;border-radius:10px;background:var(--teal-soft);color:#275c64;text-decoration:none;padding:7px 10px;font-weight:750;font-size:13px}
+.phone svg{height:15px;width:15px}
+.content-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:30px 0 13px}
+.content-heading h2{margin:0;font-size:21px}
+.content-heading p{margin:0;color:var(--muted);font-size:12px}
+.accordions{display:grid;gap:10px}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 3px 12px rgba(38,73,84,.025);scroll-margin-top:12px}
+details[open]{box-shadow:var(--shadow);border-color:#cbdfe2}
+summary{list-style:none;display:flex;align-items:center;gap:13px;cursor:pointer;padding:15px 18px;min-height:72px;user-select:none}
+summary::-webkit-details-marker{display:none}
+.section-icon{width:40px;height:40px;flex:0 0 40px;border-radius:13px;display:grid;place-items:center;background:var(--icon-bg,var(--blue-soft));color:var(--icon-color,var(--teal))}
+.section-icon svg{width:21px;height:21px;stroke:currentColor}
+.summary-text{flex:1;min-width:0}
+.summary-text strong{display:block;font-size:14px;font-weight:760;line-height:1.35}
+.summary-text small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+.chevron{width:28px;height:28px;border:1px solid var(--line);border-radius:9px;display:grid;place-items:center;color:#67818b;flex:0 0 28px;transition:transform .2s}
+details[open] .chevron{transform:rotate(180deg);background:#f0f7f7}
+.chevron svg{width:14px;height:14px}
+.panel{padding:2px 22px 20px 71px;color:#425b66;font-size:14px}
+.panel p{margin:7px 0}
+.panel ul{padding-left:20px;margin:8px 0}
+.panel li{margin:6px 0;padding-left:2px}
+.panel .note{background:var(--yellow);border:1px solid #f0e8bc;border-radius:11px;padding:11px 13px;color:#655b35;font-weight:650;margin-top:12px}
+.pill{display:inline-block;padding:3px 8px;border-radius:7px;font-size:11px;background:var(--lav);color:#635b86;font-weight:750;margin-inline-end:5px}
+footer{border-top:1px solid var(--line);background:#eef4f5;padding:21px 0 27px;color:var(--muted);font-size:11px}
+.footer-inner{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.footer-brand{font-weight:750;color:#4f6b75;letter-spacing:.03em}
+@media(min-width:800px){.accordions{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.accordions details{height:fit-content}.accordions details[open]{grid-row:span 1}}
+@media(max-width:680px){.wrap{width:min(100% - 22px,1060px)}.topline{align-items:flex-start;flex-direction:column;padding:13px 0 5px}.brand-row{gap:8px;width:100%}.logo-card{min-height:47px;padding:5px 7px}.logo-scs{width:105px;height:36px}.logo-chuimi{width:102px;height:38px}.brand-divider{height:32px}.hospital-name{font-size:9px;max-width:160px}.language{width:100%;display:grid;grid-template-columns:1fr 1.6fr;align-items:center;gap:12px;padding:7px 0}.language select{width:100%;padding:9px 9px}.hero{padding:20px 0 27px;grid-template-columns:minmax(0,1fr) 72px;gap:12px}.hero-art{width:72px;height:82px;border-radius:27px}.hero-art svg{width:58px;height:58px}.hero-art:before{width:18px;height:18px;top:3px;right:0}.hero-art:after{width:13px;height:13px;bottom:5px;left:4px}.subtitle{font-size:13px}.eyebrow{font-size:9px;padding:6px 9px}main{padding:19px 0 36px}.intro{padding:17px 15px;grid-template-columns:35px minmax(0,1fr);gap:11px;border-radius:16px}.intro-icon{width:35px;height:35px;border-radius:11px}.intro h2{font-size:17px}.intro p{font-size:13px}.content-heading{align-items:flex-start;flex-direction:column;gap:4px;margin-top:24px}summary{padding:12px;gap:10px;min-height:66px}.section-icon{width:36px;height:36px;flex-basis:36px;border-radius:11px}.summary-text strong{font-size:13px}.summary-text small{font-size:10px}.panel{padding:0 14px 17px 58px;font-size:13px}.chevron{width:25px;height:25px;flex-basis:25px}}
+[dir="rtl"] body{text-align:right}
+[dir="rtl"] .panel ul{padding-right:20px;padding-left:0}
+[dir="rtl"] .panel{padding-right:71px;padding-left:22px}
+[dir="rtl"] .intro{grid-template-columns:45px minmax(0,1fr)}
+[dir="rtl"] .intro-icon{grid-column:2;grid-row:1}
+[dir="rtl"] .intro-copy{grid-column:1;grid-row:1}
+[dir="rtl"] .eyebrow:before{order:2}
+[dir="rtl"] .hospital-name{text-align:right}
+[dir="rtl"] .phone-row{justify-content:flex-start}
+@media(max-width:680px){[dir="rtl"] .panel{padding:0 58px 17px 14px}[dir="rtl"] .intro{grid-template-columns:35px minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="topline">
+   <div class="brand-row" aria-label="Identidad institucional">
+    <div class="logo-card"><img class="logo-scs" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Servicio_canario_de_salud_%28SCS%29.svg" alt="Logotipo del Servicio Canario de la Salud"></div>
+    <div class="brand-divider" aria-hidden="true"></div>
+    <div class="logo-card"><img class="logo-chuimi" src="https://static.netapp.com/v3/assets/blt8710a579a77cafed/blt943e0ebb3283fcf2/6a1e951ff77ae9cc34fc1456/chuimi-260x110-Logo_tcm23-85534.avif" alt="Identidad gráfica CHUIMI"><span class="hospital-name">Hospital Universitario Materno Infantil de Canarias</span></div>
+   </div>
+   <div class="language">
+    <label for="language" id="language-label">Seleccionar idioma</label>
+    <select id="language" aria-labelledby="language-label">
+     <option value="es">Español</option><option value="en">English</option><option value="fr">Français</option><option value="ar">العربية</option><option value="de">Deutsch</option><option value="it">Italiano</option>
+    </select>
+   </div>
+  </div>
+  <div class="hero">
+   <div>
+    <span class="eyebrow" id="eyebrow">Información para las familias</span>
+    <h1 id="page-title">Manual de acogida UCIP</h1>
+    <p class="subtitle" id="page-subtitle">Unidad de Cuidados Intensivos Pediátricos · Hospital Universitario Materno Infantil de Canarias</p>
+   </div>
+   <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 120 120" fill="none" stroke="#376f78" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M23 61c0-19 14-33 32-33 10 0 19 5 25 13"/><path d="M72 27l9 14 14-8"/>
+     <path d="M24 75c8 15 22 24 39 24 18 0 33-11 39-27"/><path d="M47 65h27M60.5 51.5v27"/>
+     <path d="M43 45c-5 0-9 4-9 9 0 10 17 20 17 20s17-10 17-20c0-5-4-9-9-9-4 0-7 2-8 5-2-3-5-5-8-5z" fill="#fff" stroke-width="3"/>
+    </svg>
+   </div>
+  </div>
+ </div>
+</header>
+<main class="wrap">
+ <section class="intro" aria-labelledby="welcome-title">
+  <div class="intro-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.4 1.1-1.1a5.5 5.5 0 0 0-.1-7.8z"/></svg></div>
+  <div class="intro-copy">
+   <h2 id="welcome-title">Bienvenida al niño hospitalizado y su acompañante</h2>
+   <div id="welcome-copy"></div>
+   <div class="phone-row"><span class="phone-label" id="phone-label">Teléfono de UCIP</span><a class="phone" href="tel:928444490"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1z"/></svg>928 444 490</a><a class="phone" href="tel:928444491">928 444 491</a></div>
+  </div>
+ </section>
+ <div class="content-heading"><h2 id="sections-title">Información de la unidad</h2><p id="sections-hint">Pulsa en cada apartado para consultar la información.</p></div>
+ <section class="accordions" id="sections" aria-label="Apartados del manual"></section>
+</main>
+<footer><div class="wrap footer-inner"><span class="footer-brand" id="footer-brand">UCIP · Hospital Universitario Materno Infantil de Canarias</span><span id="footer-date">Manual original: marzo de 2025</span></div></footer>
+<script>
+const icons = {
+bed:'<path d="M3 18V5m0 9h18v4M3 10h7a3 3 0 0 1 3 3v1M13 14V9h5a3 3 0 0 1 3 3v2M3 18v2m18-2v2"/>',
+clipboard:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M8 9h8M8 13h8M8 17h5"/>',
+users:'<path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7h.01"/>',
+check:'<path d="M20 7 10 17l-5-5"/><circle cx="12" cy="12" r="9"/>',
+person:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+food:'<path d="M3 3v7a4 4 0 0 0 4 4h1V3M6 3v18M14 3v7a4 4 0 0 0 4 4h1V3M17 3v18"/>',
+hand:'<path d="M7 12V5a1.5 1.5 0 0 1 3 0v5-7a1.5 1.5 0 0 1 3 0v7-5a1.5 1.5 0 0 1 3 0v7-3a1.5 1.5 0 0 1 3 0v7a8 8 0 0 1-8 8h-1a8 8 0 0 1-6-3l-3-4a2 2 0 0 1 3-2z"/>',
+moon:'<path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.8 8.8 0 1 0 20.9 13z"/>',
+bath:'<path d="M3 12h18M5 12v4a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-4M7 12V5a2 2 0 0 1 4 0M3 20l-1 2m19-2 1 2"/>',
+wifi:'<path d="M5 12.5a11 11 0 0 1 14 0M8 16a6 6 0 0 1 8 0M11 19a2 2 0 0 1 2 0"/><circle cx="12" cy="21" r=".5"/>',
+milk:'<path d="M8 3h8l-1 4 2 3v11H7V10l2-3zM8 3l1 4h6l1-4M7 11h10"/>',
+camera:'<path d="M3 8h4l2-3h6l2 3h4v12H3z"/><circle cx="12" cy="14" r="4"/>',
+smoke:'<path d="M3 14h15v4H3zM18 15h3v3h-3M5 10c-2-2 2-2 0-4M10 10c-2-2 2-2 0-4"/>',
+message:'<path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 4a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/>',
+chair:'<path d="M6 11V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6M5 11h14v5H5zM7 16v5m10-5v5"/>',
+coffee:'<path d="M4 8h13v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM17 10h2a2 2 0 1 1 0 4h-2M7 3v2m4-2v2m4-2v2"/>',
+bag:'<path d="M5 8h14l1 13H4zM9 8V6a3 3 0 0 1 6 0v2"/>',
+heart:'<path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.4 1.1-1.1a5.5 5.5 0 0 0-.1-7.8z"/>'
+};
+function icon(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(icons[name]||icons.info)+'</svg>';}
+const languages = {
+es:{
+docTitle:"Manual de acogida UCIP · CHUIMI",eyebrow:"Información para las familias",title:"Manual de acogida UCIP",subtitle:"Unidad de Cuidados Intensivos Pediátricos · Hospital Universitario Materno Infantil de Canarias",welcomeTitle:"Bienvenida al niño hospitalizado y su acompañante",greeting:"Estimados padres y niños:",welcome:["Nos complace darles la bienvenida al Hospital Universitario Materno Infantil de Canarias (HUMIC), agradeciéndoles la confianza que han depositado en nosotros.","Se encuentra usted en la Unidad de Cuidados Intensivos Pediátricos (UCIP), ubicada en la planta 1.ª del HUMIC, donde su hijo/a va a permanecer ingresado durante los días que necesite.","Les invitamos a que se queden con su hijo, pues forman parte de la vida del niño y son esenciales para una recuperación más satisfactoria. Esperamos cumplir sus expectativas y les estaremos muy agradecidos si nos transmiten sus sugerencias y comentarios."],phone:"Teléfono de UCIP",sectionsTitle:"Información de la unidad",hint:"Pulsa en cada apartado para consultar la información.",footer:"UCIP · Hospital Universitario Materno Infantil de Canarias",date:"Manual original: marzo de 2025",
+sections:[
+{title:"Boxes",sub:"Espacios individuales y equipamiento",icon:"bed",bg:"var(--blue-soft)",body:["La Unidad dispone de boxes individuales donde se incluye:","• Camas o cunas dependiendo de la edad del niño/a.","• Sillón para el acompañante.","• Monitor, respirador y «aparatos» necesarios para la vigilancia y tratamiento de su hijo/a.","• Sistema de llamada/aviso (timbre) de enfermería localizado en la cabecera de la cama."]},
+{title:"Ingreso",sub:"Durante la estancia en la unidad",icon:"clipboard",bg:"var(--lav)",body:["Durante la estancia su hijo va a ser atendido por un equipo de profesionales cuyo objetivo es mejorar su estado de salud. Colabore con ellos siguiendo sus indicaciones.","Es importante que lleve siempre la pulsera identificativa que se le colocará a su llegada. No debe retirársela hasta que abandone las instalaciones del hospital."]},
+{title:"Profesionales",sub:"Identificación del personal",icon:"users",bg:"var(--teal-soft)",body:["El personal lleva una tarjeta de identificación donde figura su nombre y categoría profesional."]},
+{title:"Información médica",sub:"Información del médico responsable",icon:"info",bg:"var(--peach)",body:["De lunes a viernes, a partir de las 12:30 h, recibirá la información del médico responsable de su hijo/a.","La información médica se proporciona solo a los padres o tutores legales y no se dará información telefónica."],note:"IMPORTANTE: Tener actualizado en su historia clínica los números de teléfono de contacto."},
+{title:"Alta",sub:"Traslado a planta de hospitalización",icon:"check",bg:"var(--teal-soft)",body:["Recibirá el alta de esta unidad a la planta de hospitalización cuando su médico lo valore y así se lo comunique.","El día del alta su médico enviará a la planta un informe clínico sobre la evolución del proceso y el tratamiento a seguir, y su enfermera un informe con los cuidados de su hijo/a que todavía precisan atención.","Usted recibirá un informe médico y de la enfermera únicamente al alta del hospital.","Con el objetivo de seguir mejorando la atención a nuestros pacientes y sus familias, le agradecemos que cumplimente la encuesta de satisfacción que le pasará el personal de enfermería."]},
+{title:"Acompañantes",sub:"Acompañamiento y visitas",icon:"person",bg:"var(--lav)",body:["Podrá permanecer un acompañante por paciente: padre, madre o tutor/a legal. En caso de necesidad designarán a otra persona y así se lo comunicarán a la enfermera responsable.","Excepcionalmente, debido a la patología del paciente y en beneficio del mismo, se podrá autorizar la permanencia de dos acompañantes por paciente.","¡Llame al timbre! Para preservar la intimidad de otros niños/as ingresados, puede ser conveniente que no pase en ese momento.","Las visitas de menores de 12 años deben consultarse previamente con el médico o la enfermera responsable.","Las visitas pueden restringirse por orden médica o de enfermería.","Colabore con el personal sanitario."]},
+{title:"Alimentación",sub:"Comida durante el ingreso",icon:"food",bg:"var(--yellow)",body:["No olvide que la comida forma parte de su tratamiento; la indicación y elaboración de la dieta está supervisada por el personal sanitario.","No traiga alimentos externos sin autorización médica.","Por razones de seguridad e higiene, no está permitido que el familiar coma dentro del box. El hospital dispone de salas para ello; consulte con el personal."]},
+{title:"Normas higiénicas",sub:"Higiene de manos y medidas de protección",icon:"hand",bg:"var(--teal-soft)",body:["Realice la higiene de manos con gel hidroalcohólico, o agua y jabón, tanto al entrar y al salir del box de su hijo/a como antes y después de tocar al niño/a.","No se permite el desplazamiento a otros boxes, permanecer en los pasillos ni hablar en voz alta.","Si su hijo/a necesita algún tipo de aislamiento, debe respetar las medidas de protección que le indiquen los profesionales.","Evite visitas al hospital si cree estar enfermo/a (catarro, gripe…). Cuando no sea posible, deberá utilizar mascarilla y realizar higiene de manos de forma estricta."]},
+{title:"Descanso",sub:"Descanso nocturno y dispositivos",icon:"moon",bg:"var(--blue-soft)",body:["Durante la noche, lo más importante es el descanso y bienestar del menor.","Mantenga sus dispositivos electrónicos silenciados. Use auriculares."]},
+{title:"Baño",sub:"Aseos y cuidado personal",icon:"bath",bg:"var(--peach)",body:["Se solicita a los acompañantes no utilizar el baño de la unidad. En el hall de las plantas disponen de baño para los familiares.","En caso de necesitar ducharse o asearse, consulte al personal de enfermería dónde puede hacerlo."]},
+{title:"Clave wifi",sub:"Acceso a la red wifi de pacientes",icon:"wifi",bg:"var(--teal-soft)",body:["Los pacientes ingresados disponen de acceso a la wifi de pacientes. Podrán acceder a las credenciales wifi escaneando el código QR presente en la pulsera identificativa del paciente."]},
+{title:"Sala de lactancia",sub:"Extracción de leche materna",icon:"milk",bg:"var(--peach)",body:["La unidad comparte una sala de lactancia materna con el servicio de Urgencias de Pediatría que puede utilizar para extraerse leche."]},
+{title:"Grabación de imágenes",sub:"Fotografías y vídeos en la unidad",icon:"camera",bg:"var(--lav)",body:["No está permitida la realización de fotografías y vídeos al personal de la Unidad y a otros niños/as que estén en la misma unidad de hospitalización de su hijo/a.","(Ley Orgánica 15/1999, de 13 de diciembre, de protección de datos de carácter personal)."]},
+{title:"Hospital sin tabaco",sub:"Prohibición de fumar",icon:"smoke",bg:"var(--blue-soft)",body:["La legislación vigente (Ley 28/2005, de 26 de diciembre) prohíbe fumar en todo el Hospital, sin excepción. Respete y haga respetar la normativa."]},
+{title:"Atención al usuario",sub:"Servicio de apoyo a usuarios y familias",icon:"message",bg:"var(--teal-soft)",body:["El hospital dispone de un Servicio de Atención al Usuario, para ayudarle en lo que necesite (planta −1, junto a Admisión Central)."]},
+{title:"Sala de acompañantes",sub:"Descanso de familiares",icon:"chair",bg:"var(--lav)",body:["Actualmente no disponemos de una sala para familiares que permita el descanso de los acompañantes. Estamos trabajando en ello.","En caso de necesidad, póngase en contacto con la supervisora que intentará buscar una solución adecuada a cada familia."]},
+{title:"Cafetería",sub:"Cafetería y máquinas expendedoras",icon:"coffee",bg:"var(--yellow)",body:["El hospital dispone de cafetería para los usuarios en el Edificio de Mar (consultas externas), y máquinas expendedoras en varias plantas de hospitalización."]},
+{title:"Objetos personales",sub:"Custodia de pertenencias",icon:"bag",bg:"var(--peach)",body:["Custodie sus objetos de valor. El hospital no se hace responsable de la pérdida de estos, así como de los juguetes y/o ropa que traigan de casa para los niños."]}
+]},
+en:{
+docTitle:"UCIP Welcome Guide · CHUIMI",eyebrow:"Information for families",title:"UCIP Welcome Guide",subtitle:"Paediatric Intensive Care Unit · University Maternal and Child Hospital of the Canary Islands",welcomeTitle:"Welcome to the hospitalised child and their companion",greeting:"Dear parents and children:",welcome:["We are pleased to welcome you to the University Maternal and Child Hospital of the Canary Islands (HUMIC), and thank you for the trust you have placed in us.","You are in the Paediatric Intensive Care Unit (UCIP), located on the 1st floor of HUMIC, where your child will remain in hospital for as many days as needed.","We invite you to stay with your child, as you are part of their life and are essential to a more satisfactory recovery. We hope to meet your expectations and would be very grateful for your suggestions and comments."],phone:"UCIP phone",sectionsTitle:"Unit information",hint:"Select each section to read the information.",footer:"UCIP · University Maternal and Child Hospital of the Canary Islands",date:"Original manual: March 2025",
+sections:[
+{title:"Individual bays",sub:"Individual spaces and equipment",icon:"bed",bg:"var(--blue-soft)",body:["The Unit has individual bays, each of which includes:","• Beds or cots depending on the child’s age.","• An armchair for the companion.","• A monitor, ventilator and the equipment needed to monitor and treat your child.","• A nursing call system (bell) located at the head of the bed."]},
+{title:"Admission",sub:"During the stay in the unit",icon:"clipboard",bg:"var(--lav)",body:["During the stay, your child will be cared for by a team of professionals whose aim is to improve their health. Please cooperate by following their instructions.","Your child must always wear the identification wristband provided on arrival. It must not be removed until you leave the hospital premises."]},
+{title:"Professionals",sub:"Staff identification",icon:"users",bg:"var(--teal-soft)",body:["Staff wear an identification card showing their name and professional category."]},
+{title:"Medical information",sub:"Information from the responsible doctor",icon:"info",bg:"var(--peach)",body:["From Monday to Friday, starting at 12:30 p.m., you will receive information from the doctor responsible for your child.","Medical information is provided only to parents or legal guardians. Information will not be given by telephone."],note:"IMPORTANT: Keep the contact telephone numbers in your child’s clinical record up to date."},
+{title:"Discharge",sub:"Transfer to the inpatient ward",icon:"check",bg:"var(--teal-soft)",body:["Your child will be discharged from this unit to the inpatient ward when the doctor has assessed the situation and informs you.","On the day of transfer, the doctor will send the ward a clinical report on the course of the illness and the treatment to follow. The nurse will send a report on any care your child still needs.","You will receive a medical report and a nursing report only when your child is discharged from the hospital.","To help us continue improving care for our patients and their families, please complete the satisfaction survey given to you by the nursing staff."]},
+{title:"Companions and visitors",sub:"Accompanying your child and visits",icon:"person",bg:"var(--lav)",body:["One companion per patient may stay: the father, mother or legal guardian. If necessary, another person may be designated; please inform the nurse responsible.","Exceptionally, due to the patient’s condition and for their benefit, two companions per patient may be authorised.","Please ring the bell. To protect the privacy of other children admitted to the unit, it may be advisable not to enter at that moment.","Visits by children under 12 must be discussed in advance with the doctor or nurse responsible.","Visits may be restricted by medical or nursing order.","Please cooperate with the healthcare staff."]},
+{title:"Food",sub:"Meals during the hospital stay",icon:"food",bg:"var(--yellow)",body:["Please remember that food is part of the treatment. The diet is prescribed and prepared under the supervision of healthcare staff.","Do not bring food from outside without medical authorisation.","For safety and hygiene reasons, family members may not eat inside the bay. The hospital has rooms for this purpose; please ask the staff."]},
+{title:"Hygiene rules",sub:"Hand hygiene and protective measures",icon:"hand",bg:"var(--teal-soft)",body:["Clean your hands with alcohol-based hand gel, or with soap and water, both when entering and leaving your child’s bay and before and after touching your child.","Moving to other bays, staying in corridors and speaking loudly are not permitted.","If your child needs any type of isolation, follow the protective measures explained by the professionals.","Avoid visiting the hospital if you think you are ill (a cold, flu, etc.). When this is not possible, you must wear a mask and perform hand hygiene strictly."]},
+{title:"Rest",sub:"Night-time rest and devices",icon:"moon",bg:"var(--blue-soft)",body:["At night, the most important things are the child’s rest and wellbeing.","Keep electronic devices on silent. Use headphones."]},
+{title:"Bathroom",sub:"Toilets and personal hygiene",icon:"bath",bg:"var(--peach)",body:["Companions are asked not to use the unit’s bathroom. Family toilets are available in the hall on the ward floors.","If you need to shower or wash, ask the nursing staff where you can do so."]},
+{title:"Wi-Fi password",sub:"Access to the patient Wi-Fi network",icon:"wifi",bg:"var(--teal-soft)",body:["Admitted patients have access to the patient Wi-Fi network. The Wi-Fi credentials can be accessed by scanning the QR code on the patient’s identification wristband."]},
+{title:"Breastfeeding room",sub:"Expressing breast milk",icon:"milk",bg:"var(--peach)",body:["The unit shares a breastfeeding room with the Paediatric Emergency Department, which you may use to express milk."]},
+{title:"Photography and video",sub:"Images in the unit",icon:"camera",bg:"var(--lav)",body:["Taking photographs or videos of Unit staff or other children in the same hospital unit as your child is not permitted.","(Organic Law 15/1999, of 13 December, on the protection of personal data)."]},
+{title:"Smoke-free hospital",sub:"No smoking",icon:"smoke",bg:"var(--blue-soft)",body:["Current legislation (Law 28/2005, of 26 December) prohibits smoking anywhere in the Hospital, without exception. Please comply with and help enforce this rule."]},
+{title:"User support service",sub:"Help for users and families",icon:"message",bg:"var(--teal-soft)",body:["The hospital has a User Support Service to help with anything you may need (floor −1, next to Central Admissions)."]},
+{title:"Companion rest room",sub:"Rest facilities for family members",icon:"chair",bg:"var(--lav)",body:["We currently do not have a room where companions can rest. We are working on this.","If you need help, contact the supervisor, who will try to find a suitable solution for each family."]},
+{title:"Cafeteria",sub:"Cafeteria and vending machines",icon:"coffee",bg:"var(--yellow)",body:["The hospital has a cafeteria for users in the Mar Building (outpatient clinics), and vending machines on several inpatient floors."]},
+{title:"Personal belongings",sub:"Looking after belongings",icon:"bag",bg:"var(--peach)",body:["Please look after your valuables. The hospital is not responsible for their loss, or for toys and/or clothes brought from home for children."]}
+]},
+fr:{
+docTitle:"Guide d’accueil de l’USIP · CHUIMI",eyebrow:"Informations pour les familles",title:"Guide d’accueil de l’USIP",subtitle:"Unité de soins intensifs pédiatriques · Hôpital universitaire maternel et infantile des Canaries",welcomeTitle:"Bienvenue à l’enfant hospitalisé et à son accompagnant",greeting:"Chers parents et enfants :",welcome:["Nous sommes heureux de vous accueillir à l’Hôpital universitaire maternel et infantile des Canaries (HUMIC) et vous remercions de la confiance que vous nous accordez.","Vous vous trouvez dans l’Unité de soins intensifs pédiatriques (USIP), située au 1er étage de l’HUMIC. Votre enfant y restera hospitalisé pendant le nombre de jours nécessaire.","Nous vous invitons à rester auprès de votre enfant, car vous faites partie de sa vie et êtes essentiels à une meilleure récupération. Nous espérons répondre à vos attentes et vous remercions par avance de nous transmettre vos suggestions et commentaires."],phone:"Téléphone de l’USIP",sectionsTitle:"Informations sur l’unité",hint:"Ouvrez chaque rubrique pour consulter les informations.",footer:"USIP · Hôpital universitaire maternel et infantile des Canaries",date:"Manuel original : mars 2025",
+sections:[
+{title:"Box individuels",sub:"Espaces individuels et équipements",icon:"bed",bg:"var(--blue-soft)",body:["L’unité dispose de box individuels comprenant :","• Des lits ou des berceaux selon l’âge de l’enfant.","• Un fauteuil pour l’accompagnant.","• Un moniteur, un respirateur et les appareils nécessaires à la surveillance et au traitement de votre enfant.","• Un système d’appel infirmier (sonnette) situé à la tête du lit."]},
+{title:"Admission",sub:"Pendant le séjour dans l’unité",icon:"clipboard",bg:"var(--lav)",body:["Pendant son séjour, votre enfant sera pris en charge par une équipe de professionnels dont l’objectif est d’améliorer son état de santé. Veuillez collaborer avec eux en suivant leurs indications.","Votre enfant doit toujours porter le bracelet d’identification remis à son arrivée. Il ne doit pas être retiré avant votre départ de l’hôpital."]},
+{title:"Professionnels",sub:"Identification du personnel",icon:"users",bg:"var(--teal-soft)",body:["Le personnel porte une carte d’identification indiquant son nom et sa catégorie professionnelle."]},
+{title:"Informations médicales",sub:"Informations du médecin responsable",icon:"info",bg:"var(--peach)",body:["Du lundi au vendredi, à partir de 12 h 30, vous recevrez les informations du médecin responsable de votre enfant.","Les informations médicales sont communiquées uniquement aux parents ou aux tuteurs légaux. Aucune information ne sera donnée par téléphone."],note:"IMPORTANT : Veillez à ce que les numéros de téléphone de contact soient à jour dans le dossier clinique."},
+{title:"Sortie de l’unité",sub:"Transfert vers le service d’hospitalisation",icon:"check",bg:"var(--teal-soft)",body:["Votre enfant sera transféré de cette unité vers le service d’hospitalisation lorsque le médecin l’aura évalué et vous en aura informé.","Le jour du transfert, le médecin adressera au service un compte rendu clinique sur l’évolution de la maladie et le traitement à suivre. L’infirmier/ère transmettra un compte rendu des soins dont votre enfant a encore besoin.","Vous ne recevrez un compte rendu médical et infirmier qu’à la sortie de l’hôpital.","Afin de continuer à améliorer les soins apportés à nos patients et à leurs familles, nous vous remercions de remplir le questionnaire de satisfaction que vous remettra le personnel infirmier."]},
+{title:"Accompagnants et visites",sub:"Présence auprès de l’enfant et visites",icon:"person",bg:"var(--lav)",body:["Un accompagnant par patient peut rester : le père, la mère ou le tuteur légal. Si nécessaire, une autre personne pourra être désignée ; veuillez en informer l’infirmier/ère responsable.","Exceptionnellement, en raison de la pathologie du patient et dans son intérêt, la présence de deux accompagnants par patient peut être autorisée.","Veuillez sonner. Afin de préserver l’intimité des autres enfants hospitalisés, il peut être préférable de ne pas entrer à ce moment-là.","Les visites des enfants de moins de 12 ans doivent être consultées au préalable avec le médecin ou l’infirmier/ère responsable.","Les visites peuvent être limitées sur ordre médical ou infirmier.","Veuillez collaborer avec le personnel soignant."]},
+{title:"Alimentation",sub:"Repas pendant l’hospitalisation",icon:"food",bg:"var(--yellow)",body:["N’oubliez pas que l’alimentation fait partie du traitement ; la prescription et la préparation du régime sont supervisées par le personnel soignant.","N’apportez pas d’aliments de l’extérieur sans autorisation médicale.","Pour des raisons de sécurité et d’hygiène, les proches ne sont pas autorisés à manger dans le box. L’hôpital dispose de salles à cet effet ; veuillez vous renseigner auprès du personnel."]},
+{title:"Règles d’hygiène",sub:"Hygiène des mains et mesures de protection",icon:"hand",bg:"var(--teal-soft)",body:["Effectuez l’hygiène des mains avec du gel hydroalcoolique, ou avec de l’eau et du savon, en entrant et en sortant du box de votre enfant, ainsi qu’avant et après l’avoir touché.","Il est interdit de se déplacer dans les autres box, de rester dans les couloirs ou de parler à voix haute.","Si votre enfant doit être isolé, respectez les mesures de protection indiquées par les professionnels.","Évitez de vous rendre à l’hôpital si vous pensez être malade (rhume, grippe…). Si cela est inévitable, portez un masque et effectuez une hygiène des mains stricte."]},
+{title:"Repos",sub:"Repos nocturne et appareils",icon:"moon",bg:"var(--blue-soft)",body:["Pendant la nuit, le plus important est le repos et le bien-être de l’enfant.","Mettez vos appareils électroniques en mode silencieux. Utilisez des écouteurs."]},
+{title:"Salle de bain",sub:"Toilettes et hygiène personnelle",icon:"bath",bg:"var(--peach)",body:["Les accompagnants sont priés de ne pas utiliser les toilettes de l’unité. Des toilettes pour les familles se trouvent dans le hall des étages d’hospitalisation.","Si vous avez besoin de prendre une douche ou de faire votre toilette, demandez au personnel infirmier où vous pouvez le faire."]},
+{title:"Code Wi-Fi",sub:"Accès au réseau Wi-Fi des patients",icon:"wifi",bg:"var(--teal-soft)",body:["Les patients hospitalisés ont accès au réseau Wi-Fi des patients. Les identifiants Wi-Fi sont accessibles en scannant le code QR présent sur le bracelet d’identification du patient."]},
+{title:"Salle d’allaitement",sub:"Tirer le lait maternel",icon:"milk",bg:"var(--peach)",body:["L’unité partage une salle d’allaitement avec le service des urgences pédiatriques, que vous pouvez utiliser pour tirer votre lait."]},
+{title:"Photos et vidéos",sub:"Images dans l’unité",icon:"camera",bg:"var(--lav)",body:["Il est interdit de prendre des photos ou des vidéos du personnel de l’unité et des autres enfants hospitalisés dans la même unité que votre enfant.","(Loi organique 15/1999 du 13 décembre relative à la protection des données à caractère personnel)."]},
+{title:"Hôpital sans tabac",sub:"Interdiction de fumer",icon:"smoke",bg:"var(--blue-soft)",body:["La législation en vigueur (loi 28/2005 du 26 décembre) interdit de fumer dans tout l’hôpital, sans exception. Veuillez respecter et faire respecter cette règle."]},
+{title:"Service d’aide aux usagers",sub:"Aide aux usagers et aux familles",icon:"message",bg:"var(--teal-soft)",body:["L’hôpital dispose d’un Service d’aide aux usagers pour vous aider selon vos besoins (étage −1, à côté des admissions centrales)."]},
+{title:"Salle de repos des accompagnants",sub:"Repos des membres de la famille",icon:"chair",bg:"var(--lav)",body:["Nous ne disposons actuellement pas de salle permettant aux accompagnants de se reposer. Nous travaillons à cette solution.","En cas de besoin, contactez la superviseure, qui essaiera de trouver une solution adaptée à chaque famille."]},
+{title:"Cafétéria",sub:"Cafétéria et distributeurs automatiques",icon:"coffee",bg:"var(--yellow)",body:["L’hôpital dispose d’une cafétéria pour les usagers dans le bâtiment Mar (consultations externes), ainsi que de distributeurs automatiques à plusieurs étages d’hospitalisation."]},
+{title:"Effets personnels",sub:"Garde des effets personnels",icon:"bag",bg:"var(--peach)",body:["Veillez sur vos objets de valeur. L’hôpital n’est pas responsable de leur perte, ni de celle des jouets et/ou vêtements apportés de la maison pour les enfants."]}
+]},
+ar:{
+docTitle:"دليل الاستقبال في العناية المركزة للأطفال · CHUIMI",eyebrow:"معلومات للعائلات",title:"دليل الاستقبال في وحدة العناية المركزة للأطفال",subtitle:"وحدة العناية المركزة للأطفال · المستشفى الجامعي للأم والطفل في جزر الكناري",welcomeTitle:"مرحبًا بالطفل المُدخل إلى المستشفى ومرافقه",greeting:"أولياء الأمور والأطفال الأعزاء:",welcome:["يسعدنا الترحيب بكم في المستشفى الجامعي للأم والطفل في جزر الكناري (HUMIC)، ونشكركم على الثقة التي وضعتموها فينا.","أنتم الآن في وحدة العناية المركزة للأطفال (UCIP)، الواقعة في الطابق الأول من HUMIC، حيث سيبقى طفلكم في المستشفى للمدة التي يحتاج إليها.","ندعوكم إلى البقاء مع طفلكم، فأنتم جزء من حياته ووجودكم أساسي لتحقيق تعافٍ أفضل. نأمل أن نلبي توقعاتكم، ونكون ممتنين لتلقي اقتراحاتكم وملاحظاتكم."],phone:"هاتف وحدة العناية المركزة للأطفال",sectionsTitle:"معلومات عن الوحدة",hint:"اضغطوا على كل قسم للاطلاع على المعلومات.",footer:"وحدة العناية المركزة للأطفال · المستشفى الجامعي للأم والطفل في جزر الكناري",date:"النسخة الأصلية من الدليل: مارس 2025",
+sections:[
+{title:"الغرف الفردية",sub:"المساحات الفردية والمعدات",icon:"bed",bg:"var(--blue-soft)",body:["تضم الوحدة غرفًا فردية تحتوي على:","• أسرّة أو أسرّة أطفال بحسب عمر الطفل.","• كرسي للمرافق.","• جهاز مراقبة وجهاز تنفس صناعي والأجهزة اللازمة لمراقبة الطفل وعلاجه.","• نظام لطلب المساعدة من التمريض (جرس) بجانب رأس السرير."]},
+{title:"الدخول إلى الوحدة",sub:"أثناء الإقامة في الوحدة",icon:"clipboard",bg:"var(--lav)",body:["سيتولى رعاية طفلكم فريق من المهنيين يهدف إلى تحسين حالته الصحية. يُرجى التعاون معهم واتباع تعليماتهم.","يجب أن يرتدي طفلكم دائمًا سوار التعريف الذي يوضع عند الوصول. يجب عدم نزعه حتى مغادرة المستشفى."]},
+{title:"المهنيون",sub:"التعريف بهوية الموظفين",icon:"users",bg:"var(--teal-soft)",body:["يحمل الموظفون بطاقة تعريف يظهر عليها الاسم والفئة المهنية."]},
+{title:"المعلومات الطبية",sub:"معلومات الطبيب المسؤول",icon:"info",bg:"var(--peach)",body:["من الاثنين إلى الجمعة، ابتداءً من الساعة 12:30، ستتلقون المعلومات من الطبيب المسؤول عن طفلكم.","تُقدَّم المعلومات الطبية للوالدين أو الأوصياء القانونيين فقط، ولا تُقدَّم معلومات عبر الهاتف."],note:"هام: احرصوا على تحديث أرقام هواتف التواصل في السجل السريري."},
+{title:"الخروج من الوحدة",sub:"النقل إلى جناح التنويم",icon:"check",bg:"var(--teal-soft)",body:["سيُنقل طفلكم من هذه الوحدة إلى جناح التنويم عندما يقيّم الطبيب الحالة ويبلغكم بذلك.","في يوم النقل، يرسل الطبيب إلى الجناح تقريرًا سريريًا عن تطور الحالة والعلاج الواجب اتباعه، وترسل الممرضة تقريرًا عن الرعاية التي لا يزال طفلكم بحاجة إليها.","لن تتلقوا تقرير الطبيب وتقرير التمريض إلا عند الخروج من المستشفى.","للمساعدة في مواصلة تحسين رعاية المرضى وأسرهم، نشكركم على تعبئة استبيان الرضا الذي سيقدمه لكم طاقم التمريض."]},
+{title:"المرافقون والزيارات",sub:"مرافقة الطفل والزيارات",icon:"person",bg:"var(--lav)",body:["يمكن أن يبقى مرافق واحد لكل مريض: الأب أو الأم أو الوصي القانوني. عند الحاجة، يمكن تعيين شخص آخر مع إبلاغ الممرضة المسؤولة.","استثنائيًا، وبسبب حالة المريض ولمصلحته، قد يُسمح ببقاء مرافقين اثنين لكل مريض.","يرجى الضغط على الجرس. حفاظًا على خصوصية الأطفال الآخرين في الوحدة، قد يكون من الأفضل عدم الدخول في تلك اللحظة.","يجب استشارة الطبيب أو الممرضة المسؤولة مسبقًا بشأن زيارة الأطفال دون سن 12 عامًا.","قد تُقيَّد الزيارات بأمر طبي أو تمريضي.","يرجى التعاون مع الطاقم الصحي."]},
+{title:"التغذية",sub:"الطعام أثناء الإقامة",icon:"food",bg:"var(--yellow)",body:["تذكّروا أن الطعام جزء من العلاج، ويشرف الطاقم الصحي على تحديد الحمية وإعدادها.","لا تحضروا أطعمة من الخارج دون إذن طبي.","لأسباب تتعلق بالسلامة والنظافة، لا يُسمح للمرافق بتناول الطعام داخل الغرفة. توجد في المستشفى أماكن مخصصة لذلك؛ يرجى سؤال الموظفين."]},
+{title:"قواعد النظافة",sub:"نظافة اليدين وإجراءات الحماية",icon:"hand",bg:"var(--teal-soft)",body:["نظّفوا أيديكم بالهلام الكحولي أو بالماء والصابون عند الدخول إلى غرفة طفلكم والخروج منها، وكذلك قبل لمس الطفل وبعده.","لا يُسمح بالانتقال إلى غرف أخرى أو البقاء في الممرات أو التحدث بصوت مرتفع.","إذا احتاج طفلكم إلى أي نوع من العزل، فيجب الالتزام بإجراءات الحماية التي يوضحها المهنيون.","تجنبوا زيارة المستشفى إذا اعتقدتم أنكم مرضى (زكام أو إنفلونزا...). وإذا تعذر ذلك، يجب ارتداء الكمامة والالتزام الصارم بنظافة اليدين."]},
+{title:"الراحة",sub:"الراحة الليلية والأجهزة",icon:"moon",bg:"var(--blue-soft)",body:["الأهم خلال الليل هو راحة الطفل ورفاهيته.","اجعلوا الأجهزة الإلكترونية على الوضع الصامت واستخدموا سماعات الأذن."]},
+{title:"الحمّام",sub:"دورات المياه والنظافة الشخصية",icon:"bath",bg:"var(--peach)",body:["يُطلب من المرافقين عدم استخدام حمّام الوحدة. توجد دورات مياه للعائلات في ردهة طوابق التنويم.","إذا احتجتم إلى الاستحمام أو الاغتسال، فاسألوا طاقم التمريض عن المكان الذي يمكنكم استخدامه."]},
+{title:"رمز الواي فاي",sub:"الوصول إلى شبكة المرضى",icon:"wifi",bg:"var(--teal-soft)",body:["يتمتع المرضى المنومون بإمكانية الوصول إلى شبكة الواي فاي الخاصة بالمرضى. يمكن الحصول على بيانات الدخول عبر مسح رمز QR الموجود على سوار تعريف المريض."]},
+{title:"غرفة الرضاعة",sub:"شفط حليب الأم",icon:"milk",bg:"var(--peach)",body:["تتشارك الوحدة غرفة للرضاعة الطبيعية مع قسم طوارئ الأطفال، ويمكنكم استخدامها لشفط الحليب."]},
+{title:"التصوير والفيديو",sub:"الصور داخل الوحدة",icon:"camera",bg:"var(--lav)",body:["لا يُسمح بالتقاط الصور أو مقاطع الفيديو لموظفي الوحدة أو للأطفال الآخرين الموجودين في وحدة التنويم نفسها التي يوجد فيها طفلكم.","(القانون الأساسي 15/1999 الصادر في 13 ديسمبر بشأن حماية البيانات الشخصية)."]},
+{title:"مستشفى خالٍ من التدخين",sub:"حظر التدخين",icon:"smoke",bg:"var(--blue-soft)",body:["يحظر التشريع الساري (القانون 28/2005 الصادر في 26 ديسمبر) التدخين في جميع أنحاء المستشفى دون استثناء. يُرجى احترام هذه القاعدة والمساعدة على تطبيقها."]},
+{title:"خدمة مساعدة المستخدمين",sub:"المساعدة للمرضى والعائلات",icon:"message",bg:"var(--teal-soft)",body:["تتوفر في المستشفى خدمة لمساعدة المستخدمين في احتياجاتهم (الطابق −1، بجوار القبول المركزي)."]},
+{title:"غرفة راحة المرافقين",sub:"راحة أفراد العائلة",icon:"chair",bg:"var(--lav)",body:["لا تتوفر حاليًا غرفة مخصصة لراحة المرافقين، ونعمل على توفيرها.","عند الحاجة، تواصلوا مع المشرفة التي ستحاول إيجاد حل مناسب لكل عائلة."]},
+{title:"الكافتيريا",sub:"الكافتيريا وآلات البيع",icon:"coffee",bg:"var(--yellow)",body:["توجد كافتيريا للمستخدمين في مبنى مار (العيادات الخارجية)، إضافة إلى آلات بيع في عدة طوابق للتنويم."]},
+{title:"المقتنيات الشخصية",sub:"الحفاظ على الممتلكات",icon:"bag",bg:"var(--peach)",body:["يرجى الحفاظ على مقتنياتكم الثمينة. لا يتحمل المستشفى مسؤولية فقدانها، كما لا يتحمل مسؤولية فقدان الألعاب أو الملابس التي تُحضر من المنزل للأطفال."]}
+]},
+de:{
+docTitle:"Willkommenshandbuch der pädiatrischen Intensivstation · CHUIMI",eyebrow:"Informationen für Familien",title:"Willkommenshandbuch der UCIP",subtitle:"Pädiatrische Intensivstation · Universitätskrankenhaus für Mutter und Kind der Kanarischen Inseln",welcomeTitle:"Willkommen für das hospitalisierte Kind und seine Begleitperson",greeting:"Liebe Eltern und Kinder,",welcome:["Wir freuen uns, Sie im Universitätskrankenhaus für Mutter und Kind der Kanarischen Inseln (HUMIC) willkommen zu heißen, und danken Ihnen für das Vertrauen, das Sie uns entgegenbringen.","Sie befinden sich auf der pädiatrischen Intensivstation (UCIP) im 1. Stock des HUMIC. Ihr Kind bleibt hier so lange stationär, wie es erforderlich ist.","Wir laden Sie ein, bei Ihrem Kind zu bleiben. Sie gehören zu seinem Leben und sind für eine bestmögliche Genesung von wesentlicher Bedeutung. Wir hoffen, Ihre Erwartungen zu erfüllen, und freuen uns über Ihre Anregungen und Rückmeldungen."],phone:"Telefon der UCIP",sectionsTitle:"Informationen zur Station",hint:"Öffnen Sie einen Abschnitt, um die Informationen zu lesen.",footer:"UCIP · Universitätskrankenhaus für Mutter und Kind der Kanarischen Inseln",date:"Originalhandbuch: März 2025",
+sections:[
+{title:"Einzelboxen",sub:"Individuelle Bereiche und Ausstattung",icon:"bed",bg:"var(--blue-soft)",body:["Die Station verfügt über Einzelboxen mit folgender Ausstattung:","• Betten oder Kinderbetten je nach Alter des Kindes.","• Ein Sessel für die Begleitperson.","• Monitor, Beatmungsgerät und die für Überwachung und Behandlung Ihres Kindes erforderlichen Geräte.","• Eine Rufanlage für die Pflege (Klingel) am Kopfende des Bettes."]},
+{title:"Aufnahme",sub:"Während des Aufenthalts auf der Station",icon:"clipboard",bg:"var(--lav)",body:["Während des Aufenthalts wird Ihr Kind von einem Team betreut, dessen Ziel es ist, seinen Gesundheitszustand zu verbessern. Bitte unterstützen Sie das Team und befolgen Sie die Anweisungen.","Ihr Kind muss das bei der Ankunft angelegte Identifikationsarmband jederzeit tragen. Es darf erst beim Verlassen des Krankenhauses abgenommen werden."]},
+{title:"Fachpersonal",sub:"Ausweis des Personals",icon:"users",bg:"var(--teal-soft)",body:["Das Personal trägt einen Ausweis mit Namen und Berufsgruppe."]},
+{title:"Medizinische Informationen",sub:"Informationen durch den verantwortlichen Arzt",icon:"info",bg:"var(--peach)",body:["Montag bis Freitag ab 12:30 Uhr erhalten Sie Informationen vom für Ihr Kind verantwortlichen Arzt.","Medizinische Informationen werden nur den Eltern oder gesetzlichen Vertretern erteilt. Telefonisch werden keine Informationen gegeben."],note:"WICHTIG: Halten Sie die Kontakttelefonnummern in der klinischen Akte auf dem aktuellen Stand."},
+{title:"Entlassung",sub:"Verlegung auf die Normalstation",icon:"check",bg:"var(--teal-soft)",body:["Ihr Kind wird aus dieser Einheit auf die Normalstation verlegt, wenn der Arzt die Situation beurteilt und Sie darüber informiert hat.","Am Tag der Verlegung sendet der Arzt einen klinischen Bericht über den Verlauf und die weitere Behandlung an die Station. Die Pflegekraft sendet einen Bericht über die Pflege, die Ihr Kind weiterhin benötigt.","Einen ärztlichen und pflegerischen Bericht erhalten Sie erst bei der Entlassung aus dem Krankenhaus.","Damit wir die Versorgung unserer Patienten und ihrer Familien weiter verbessern können, bitten wir Sie, den Zufriedenheitsfragebogen auszufüllen, den Ihnen das Pflegepersonal aushändigt."]},
+{title:"Begleitpersonen und Besuche",sub:"Begleitung des Kindes und Besuchsregelung",icon:"person",bg:"var(--lav)",body:["Pro Patient darf eine Begleitperson bleiben: Vater, Mutter oder gesetzlicher Vormund. Bei Bedarf kann eine andere Person benannt werden; informieren Sie bitte die zuständige Pflegekraft.","Ausnahmsweise können aufgrund der Erkrankung und zum Wohl des Patienten zwei Begleitpersonen pro Patient zugelassen werden.","Bitte klingeln Sie. Um die Privatsphäre anderer aufgenommener Kinder zu schützen, kann es ratsam sein, in diesem Moment nicht einzutreten.","Besuche von Kindern unter 12 Jahren müssen zuvor mit dem zuständigen Arzt oder der zuständigen Pflegekraft abgesprochen werden.","Besuche können auf ärztliche oder pflegerische Anordnung eingeschränkt werden.","Bitte arbeiten Sie mit dem Gesundheitspersonal zusammen."]},
+{title:"Ernährung",sub:"Essen während des Krankenhausaufenthalts",icon:"food",bg:"var(--yellow)",body:["Bitte vergessen Sie nicht, dass die Ernährung Teil der Behandlung ist. Die Verordnung und Zubereitung der Kost wird vom Gesundheitspersonal überwacht.","Bringen Sie ohne ärztliche Genehmigung keine Lebensmittel von außerhalb mit.","Aus Sicherheits- und Hygienegründen dürfen Angehörige nicht in der Box essen. Das Krankenhaus verfügt über dafür vorgesehene Räume; fragen Sie bitte das Personal."]},
+{title:"Hygieneregeln",sub:"Händehygiene und Schutzmaßnahmen",icon:"hand",bg:"var(--teal-soft)",body:["Reinigen Sie Ihre Hände mit alkoholischem Händedesinfektionsmittel oder mit Wasser und Seife, sowohl beim Betreten und Verlassen der Box Ihres Kindes als auch vor und nach jeder Berührung des Kindes.","Der Wechsel in andere Boxen, der Aufenthalt auf den Fluren und lautes Sprechen sind nicht gestattet.","Wenn Ihr Kind isoliert werden muss, beachten Sie bitte die von den Fachkräften erklärten Schutzmaßnahmen.","Besuchen Sie das Krankenhaus möglichst nicht, wenn Sie glauben, krank zu sein (Erkältung, Grippe usw.). Falls dies nicht möglich ist, müssen Sie eine Maske tragen und die Händehygiene konsequent durchführen."]},
+{title:"Ruhe",sub:"Nachtruhe und elektronische Geräte",icon:"moon",bg:"var(--blue-soft)",body:["In der Nacht sind Ruhe und Wohlbefinden des Kindes am wichtigsten.","Stellen Sie Ihre elektronischen Geräte auf lautlos. Verwenden Sie Kopfhörer."]},
+{title:"Bad und Toilette",sub:"Toiletten und Körperpflege",icon:"bath",bg:"var(--peach)",body:["Begleitpersonen werden gebeten, die Toilette der Station nicht zu benutzen. Familientoiletten befinden sich in den Fluren der Stationsgeschosse.","Wenn Sie duschen oder sich waschen müssen, fragen Sie das Pflegepersonal, wo dies möglich ist."]},
+{title:"WLAN-Zugang",sub:"Zugang zum Patienten-WLAN",icon:"wifi",bg:"var(--teal-soft)",body:["Stationär aufgenommene Patienten haben Zugang zum Patienten-WLAN. Die Zugangsdaten erhalten Sie, indem Sie den QR-Code auf dem Identifikationsarmband des Patienten scannen."]},
+{title:"Stillraum",sub:"Abpumpen von Muttermilch",icon:"milk",bg:"var(--peach)",body:["Die Station teilt sich einen Stillraum mit der pädiatrischen Notaufnahme. Sie können diesen Raum zum Abpumpen von Milch benutzen."]},
+{title:"Foto- und Videoaufnahmen",sub:"Bilder auf der Station",icon:"camera",bg:"var(--lav)",body:["Fotos und Videos vom Personal der Station sowie von anderen Kindern, die sich auf derselben Station wie Ihr Kind befinden, sind nicht erlaubt.","(Organgesetz 15/1999 vom 13. Dezember zum Schutz personenbezogener Daten)."]},
+{title:"Rauchfreies Krankenhaus",sub:"Rauchverbot",icon:"smoke",bg:"var(--blue-soft)",body:["Die geltende Gesetzgebung (Gesetz 28/2005 vom 26. Dezember) verbietet das Rauchen im gesamten Krankenhaus ausnahmslos. Bitte halten Sie diese Regel ein und helfen Sie, sie durchzusetzen."]},
+{title:"Nutzer-Service",sub:"Unterstützung für Nutzer und Familien",icon:"message",bg:"var(--teal-soft)",body:["Das Krankenhaus verfügt über einen Nutzer-Service, der Ihnen bei Bedarf hilft (Etage −1, neben der zentralen Aufnahme)."]},
+{title:"Ruheraum für Begleitpersonen",sub:"Ruhemöglichkeit für Angehörige",icon:"chair",bg:"var(--lav)",body:["Derzeit steht kein Raum zur Verfügung, in dem sich Begleitpersonen ausruhen können. Wir arbeiten daran, dies zu ermöglichen.","Bei Bedarf wenden Sie sich an die Stationsleitung, die versuchen wird, eine passende Lösung für jede Familie zu finden."]},
+{title:"Cafeteria",sub:"Cafeteria und Verkaufsautomaten",icon:"coffee",bg:"var(--yellow)",body:["Das Krankenhaus verfügt über eine Cafeteria für Besucher im Gebäude Mar (Ambulanzen) sowie über Verkaufsautomaten auf mehreren Stationsebenen."]},
+{title:"Persönliche Gegenstände",sub:"Aufbewahrung persönlicher Dinge",icon:"bag",bg:"var(--peach)",body:["Bewahren Sie Ihre Wertsachen sorgfältig auf. Das Krankenhaus übernimmt keine Verantwortung für deren Verlust oder für Spielzeug und/oder Kleidung, die für Kinder von zu Hause mitgebracht werden."]}
+]},
+it:{
+docTitle:"Manuale di accoglienza della UCIP · CHUIMI",eyebrow:"Informazioni per le famiglie",title:"Manuale di accoglienza UCIP",subtitle:"Unità di Terapia Intensiva Pediatrica · Ospedale Universitario Materno-Infantile delle Canarie",welcomeTitle:"Benvenuto al bambino ricoverato e alla persona accompagnatrice",greeting:"Gentili genitori e bambini,",welcome:["Siamo lieti di darvi il benvenuto all’Ospedale Universitario Materno-Infantile delle Canarie (HUMIC) e vi ringraziamo per la fiducia che avete riposto in noi.","Vi trovate nell’Unità di Terapia Intensiva Pediatrica (UCIP), situata al 1º piano dell’HUMIC, dove vostro figlio/a resterà ricoverato per i giorni necessari.","Vi invitiamo a rimanere con vostro figlio, poiché fate parte della sua vita e siete essenziali per una ripresa più soddisfacente. Ci auguriamo di soddisfare le vostre aspettative e vi saremo grati per suggerimenti e commenti."],phone:"Telefono UCIP",sectionsTitle:"Informazioni sull’unità",hint:"Selezionate ogni sezione per leggere le informazioni.",footer:"UCIP · Ospedale Universitario Materno-Infantile delle Canarie",date:"Manuale originale: marzo 2025",
+sections:[
+{title:"Box individuali",sub:"Spazi individuali e attrezzature",icon:"bed",bg:"var(--blue-soft)",body:["L’unità dispone di box individuali che includono:","• Letti o culle a seconda dell’età del bambino/a.","• Poltrona per la persona accompagnatrice.","• Monitor, respiratore e apparecchi necessari per il monitoraggio e il trattamento del bambino/a.","• Sistema di chiamata per il personale infermieristico (campanello) situato alla testata del letto."]},
+{title:"Ricovero",sub:"Durante la permanenza nell’unità",icon:"clipboard",bg:"var(--lav)",body:["Durante la permanenza, vostro figlio sarà assistito da un’équipe di professionisti il cui obiettivo è migliorare il suo stato di salute. Collaborate seguendo le loro indicazioni.","Il bambino deve indossare sempre il braccialetto identificativo applicato al suo arrivo. Non deve essere rimosso fino all’uscita dall’ospedale."]},
+{title:"Professionisti",sub:"Identificazione del personale",icon:"users",bg:"var(--teal-soft)",body:["Il personale indossa un tesserino identificativo con il nome e la categoria professionale."]},
+{title:"Informazioni mediche",sub:"Informazioni del medico responsabile",icon:"info",bg:"var(--peach)",body:["Dal lunedì al venerdì, a partire dalle 12:30, riceverete informazioni dal medico responsabile di vostro figlio/a.","Le informazioni mediche vengono fornite solo ai genitori o ai tutori legali. Non vengono fornite informazioni per telefono."],note:"IMPORTANTE: Mantenete aggiornati i numeri di telefono di contatto nella cartella clinica."},
+{title:"Dimissione dall’unità",sub:"Trasferimento al reparto di degenza",icon:"check",bg:"var(--teal-soft)",body:["Il bambino sarà trasferito da questa unità al reparto di degenza quando il medico avrà valutato la situazione e ve lo avrà comunicato.","Il giorno del trasferimento, il medico invierà al reparto una relazione clinica sull’evoluzione del quadro e sul trattamento da seguire. L’infermiere invierà una relazione sulle cure di cui il bambino ha ancora bisogno.","Riceverete una relazione medica e infermieristica soltanto al momento delle dimissioni dall’ospedale.","Per continuare a migliorare l’assistenza ai pazienti e alle loro famiglie, vi ringraziamo se compilerete il questionario di soddisfazione che vi consegnerà il personale infermieristico."]},
+{title:"Accompagnatori e visite",sub:"Presenza accanto al bambino e visite",icon:"person",bg:"var(--lav)",body:["Può rimanere un accompagnatore per paziente: padre, madre o tutore legale. Se necessario, si può designare un’altra persona, informando l’infermiere responsabile.","In via eccezionale, a causa della patologia del paziente e a suo beneficio, può essere autorizzata la presenza di due accompagnatori per paziente.","Suonate il campanello. Per tutelare la privacy degli altri bambini ricoverati, può essere opportuno non entrare in quel momento.","Le visite di minori di 12 anni devono essere concordate in anticipo con il medico o l’infermiere responsabile.","Le visite possono essere limitate su disposizione medica o infermieristica.","Collaborate con il personale sanitario."]},
+{title:"Alimentazione",sub:"Pasti durante il ricovero",icon:"food",bg:"var(--yellow)",body:["Ricordate che il cibo fa parte del trattamento; l’indicazione e la preparazione della dieta sono supervisionate dal personale sanitario.","Non portate alimenti dall’esterno senza autorizzazione medica.","Per ragioni di sicurezza e igiene, ai familiari non è consentito mangiare all’interno del box. L’ospedale dispone di sale adatte; chiedete al personale."]},
+{title:"Norme igieniche",sub:"Igiene delle mani e misure di protezione",icon:"hand",bg:"var(--teal-soft)",body:["Igienizzate le mani con gel idroalcolico o con acqua e sapone sia entrando e uscendo dal box di vostro figlio/a sia prima e dopo averlo/a toccato/a.","Non è consentito spostarsi in altri box, sostare nei corridoi o parlare ad alta voce.","Se vostro figlio/a necessita di un tipo di isolamento, rispettate le misure di protezione indicate dai professionisti.","Evitate di recarvi in ospedale se pensate di essere malati (raffreddore, influenza…). Se non è possibile, dovrete indossare una mascherina ed effettuare un’igiene delle mani rigorosa."]},
+{title:"Riposo",sub:"Riposo notturno e dispositivi",icon:"moon",bg:"var(--blue-soft)",body:["Durante la notte, le cose più importanti sono il riposo e il benessere del minore.","Mettete i dispositivi elettronici in modalità silenziosa. Usate gli auricolari."]},
+{title:"Bagno",sub:"Servizi igienici e igiene personale",icon:"bath",bg:"var(--peach)",body:["Si chiede agli accompagnatori di non utilizzare il bagno dell’unità. I servizi per i familiari si trovano nell’atrio dei piani di degenza.","Se avete bisogno di fare una doccia o lavarvi, chiedete al personale infermieristico dove poterlo fare."]},
+{title:"Password Wi-Fi",sub:"Accesso alla rete Wi-Fi per i pazienti",icon:"wifi",bg:"var(--teal-soft)",body:["I pazienti ricoverati hanno accesso alla rete Wi-Fi per i pazienti. Le credenziali si possono ottenere scansionando il codice QR presente sul braccialetto identificativo del paziente."]},
+{title:"Sala per l’allattamento",sub:"Estrazione del latte materno",icon:"milk",bg:"var(--peach)",body:["L’unità condivide una sala per l’allattamento con il servizio di Pronto soccorso pediatrico, che potete utilizzare per estrarre il latte."]},
+{title:"Foto e video",sub:"Immagini all’interno dell’unità",icon:"camera",bg:"var(--lav)",body:["Non è consentito fotografare o filmare il personale dell’unità né gli altri bambini ricoverati nella stessa unità di vostro figlio/a.","(Legge organica 15/1999 del 13 dicembre sulla protezione dei dati personali)."]},
+{title:"Ospedale senza fumo",sub:"Divieto di fumare",icon:"smoke",bg:"var(--blue-soft)",body:["La normativa vigente (Legge 28/2005 del 26 dicembre) vieta di fumare in tutto l’ospedale, senza eccezioni. Rispettate e fate rispettare la normativa."]},
+{title:"Servizio di assistenza all’utente",sub:"Supporto per utenti e famiglie",icon:"message",bg:"var(--teal-soft)",body:["L’ospedale dispone di un Servizio di assistenza all’utente per aiutarvi in caso di necessità (piano −1, accanto all’Ammissione Centrale)."]},
+{title:"Sala per gli accompagnatori",sub:"Riposo dei familiari",icon:"chair",bg:"var(--lav)",body:["Attualmente non disponiamo di una sala in cui gli accompagnatori possano riposare. Stiamo lavorando per renderla disponibile.","In caso di necessità, contattate la supervisora, che cercherà una soluzione adeguata per ogni famiglia."]},
+{title:"Caffetteria",sub:"Caffetteria e distributori automatici",icon:"coffee",bg:"var(--yellow)",body:["L’ospedale dispone di una caffetteria per gli utenti nell’Edificio Mar (ambulatori) e di distributori automatici in diversi piani di degenza."]},
+{title:"Effetti personali",sub:"Custodia degli oggetti personali",icon:"bag",bg:"var(--peach)",body:["Custodite i vostri oggetti di valore. L’ospedale non è responsabile della loro perdita, né di giocattoli e/o vestiti portati da casa per i bambini."]}
+]}
+};
+const $ = function(id){return document.getElementById(id);};
+function escapeText(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");}
+function render(lang){
+ const t=languages[lang]||languages.es;
+ document.documentElement.lang=lang;
+ document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+ document.title=t.docTitle;
+ $("eyebrow").textContent=t.eyebrow;
+ $("page-title").textContent=t.title;
+ $("page-subtitle").textContent=t.subtitle;
+ $("welcome-title").textContent=t.welcomeTitle;
+ $("phone-label").textContent=t.phone;
+ $("sections-title").textContent=t.sectionsTitle;
+ $("sections-hint").textContent=t.hint;
+ $("footer-brand").textContent=t.footer;
+ $("footer-date").textContent=t.date;
+ $("welcome-copy").innerHTML=t.welcome.map(function(p){return "<p>"+escapeText(p)+"</p>";}).join("");
+ $("sections").innerHTML=t.sections.map(function(s,i){
+  var body=s.body.map(function(p){return "<p>"+escapeText(p)+"</p>";}).join("");
+  if(s.note){body+='<p class="note">'+escapeText(s.note)+'</p>';}
+  return '<details><summary><span class="section-icon" style="--icon-bg:'+s.bg+'">'+icon(s.icon)+'</span><span class="summary-text"><strong>'+escapeText(s.title)+'</strong><small>'+escapeText(s.sub)+'</small></span><span class="chevron">'+icon('chevron')+'</span></summary><div class="panel">'+body+'</div></details>';
+ }).join("");
+}
+icons.chevron='<path d="m6 9 6 6 6-6"/>';
+$("language").addEventListener("change",function(e){render(e.target.value);});
+render("es");
+</script>
+</body>
+</html>
